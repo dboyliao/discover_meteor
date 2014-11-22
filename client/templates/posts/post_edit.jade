@@ -1,0 +1,34 @@
+template(name="editPage")
+	form.main.form
+		div.form-group(class="{{errorClass 'url'}}")
+			label.control-label(for="url") URL
+			div.controls
+				input#url.form-control(name="url", type="text", value="{{ url }}", placeholder="Your URL")
+				span.help-block {{ errorMessage 'url'}}
+		div.form-group(class="{{ errorClass 'title'}}")
+			label.control-label(for="title") Title
+			div.controls
+				input#title.form-control(name="title", type="text", value="{{title}}", placeholder="Name your post")
+				span.help-block {{ errorMessage 'title'}}
+		input.btn.btn-primary.submit(type="submit", value="Submit")
+		hr
+		a.btn.btn-danger.delete(href="#") Delete post
+//- <template name="editPage">
+//-   <form class="main form">
+//-     <div class="form-group">
+//-       <label class="control-label" for="url">URL</label>
+//-       <div class="controls">
+//-           <input name="url" id="url" type="text" value="{{url}}" placeholder="Your URL" class="form-control"/>
+//-       </div>
+//-     </div>
+//-     <div class="form-group">
+//-       <label class="control-label" for="title">Title</label>
+//-       <div class="controls">
+//-           <input name="title" id="title" type="text" value="{{title}}" placeholder="Name your post" class="form-control"/>
+//-       </div>
+//-     </div>
+//-     <input type="submit" value="Submit" class="btn btn-primary submit"/>
+//-     <hr/>
+//-     <a class="btn btn-danger delete" href="#">Delete post</a>
+//-   </form>
+//- </template>

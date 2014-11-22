@@ -1,2 +1,6 @@
 template(name="postPage")
+	if currentUser
+		a.btn.btn-lg.btn-success(role="button", href="/submit") Submit Page
+	br
+	br
 	+postItem

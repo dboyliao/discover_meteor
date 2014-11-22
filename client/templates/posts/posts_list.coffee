@@ -15,4 +15,6 @@
 
 Template.postsList.helpers
 	posts: ->
-		Posts.find()
+		Posts.find({}, {sort:{createdAt: -1}})
+	user: ->
+		Meteor.users.findOne()

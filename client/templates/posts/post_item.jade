@@ -4,4 +4,11 @@ template(name="postItem")
 			h3 
 				a(href="{{ url }}") {{ title }} 
 				span {{ domain }}
+				p submitted by {{ author }} 
+					if ownPost
+						a.btn.btn-default(href="{{ pathFor 'editPage' }}") Edit
+				p
+					span {{ _id }}
+				p
+					span {{ createdAt }}
 		a.discuss.btn.btn-default(href="{{pathFor 'postPage'}}") Discuss

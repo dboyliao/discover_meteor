@@ -1,4 +1,8 @@
 template(name="postsList")
+	if currentUser
+		a.btn.btn-lg.btn-success(role="button", href="/submit") Submit Page
+	br 
+	br
 	div.posts
 		each posts
 			+postItem

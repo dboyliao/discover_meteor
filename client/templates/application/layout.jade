@@ -1,20 +1,12 @@
 template(name="layout")
-  .container
-    .row.clearfix
-      .col-md-12.column
-        .navbar.navbar-inverse.navbar-fixed-top
-          .container
-            .navbar-header
-              button.navbar-toggle(type="button",data-toggle="collapse",data-target=".navbar-collapse")
-                span.icon-bar
-                span.icon-bar
-                span.icon-bar
-            a.navbar-brand(href="{{pathFor 'postsList'}}") Microscope
-        .container
-          .row.clearfix
-            .col-md-12.column
-              div#main.row-fluid
-                +yield
+  div.container
+    +header
+    +meteorErrors
+    .container
+      .row.clearfix
+        .col-md-12.column
+          div#main.row-fluid
+            +yield
 
 //- body
 //-     .container

@@ -1,3 +1,4 @@
-#### Mac Related files ####
-.DS_Store
+/jade
 
+# Mac related files
+.DS_Store

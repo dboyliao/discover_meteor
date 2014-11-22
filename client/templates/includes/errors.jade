@@ -1,0 +1,23 @@
+template(name="errors")
+	div.errors
+		each errors
+			+error
+
+template(name="error")
+	div.alert.alert-danger(role="alert") {{ message }}
+		button.close(type="button", data-dismiss="alert") &times;
+
+//- <template name="errors">
+//-   <div class="errors">
+//-     {{#each errors}}
+//-       {{> error}}
+//-     {{/each}}
+//-   </div>
+//- </template>
+
+//- <template name="error">
+//-   <div class="alert alert-danger" role="alert">
+//-     <button type="button" class="close" data-dismiss="alert">&times;</button>
+//-     {{message}}
+//-   </div>
+//- </template>
