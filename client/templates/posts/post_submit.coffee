@@ -22,7 +22,7 @@ Template.postSubmit.events
 			if err
 				Errors.throw err.reason
 			if result.postExists
-				throwError("This link has already been posted")
+				Errors.throw "This link has already been posted"
 			# Router.go("postPage", {_id:result._id})
 			Router.go("postsList")
 
